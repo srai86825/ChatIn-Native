@@ -31,7 +31,7 @@ function ChatList() {
 
   return (
     <View className="sticky px-4 min-w-[360px] right-0 top-0 z-20 flex w-fit flex-col justify-between  overflow-auto border-l border-l-dark-4 py-4  max-xl:hidden bg-secondaryPink ">
-      {allContactsConnected?.map((user) => {
+      {allContactsConnected?.map((user,i) => {
         return (
           <Pressable
             onPress={() => handleInitiateChat(user)}

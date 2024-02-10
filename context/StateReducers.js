@@ -51,6 +51,7 @@ export const reducer = (state, action) => {
     }
 
     case reducerCases.CHANGE_CURRENT_CHAT_USER: {
+      console.log("CHANGE_CURRENT_CHAT_USER", action.user)
       return {
         ...state,
         currentChatUser: action.user,

@@ -2,7 +2,10 @@ import { View, Text, Pressable } from "react-native";
 import React, { useEffect, useState } from "react";
 import { FontAwesome, Ionicons, Entypo } from "@expo/vector-icons";
 import { TextInput } from "react-native";
-import { useGlobalContext, useGlobalSocket } from "../../../context/StateContext";
+import {
+  useGlobalContext,
+  useGlobalSocket,
+} from "../../../context/StateContext";
 import { ADD_MESSAGE_ROUTE } from "../../../utils/ApiRoutes";
 import axios from "axios";
 import { asyncStoragePrefixes, reducerCases } from "../../../context/constants";
@@ -12,13 +15,13 @@ const MessageBar = () => {
   const [messageText, setMessageText] = useState("");
 
   const {
-    state: { userInfo, currentChatUser, messages },
+    state: { userInfo, allContactsConnected, currentChatUser, messages },
     dispatch,
   } = useGlobalContext();
 
-  const {state:{socket}}=useGlobalSocket();
-
-  
+  const {
+    state: { socket },
+  } = useGlobalSocket();
 
   const sendMessage = async () => {
     if (messageText && userInfo && currentChatUser) {
@@ -43,6 +46,17 @@ const MessageBar = () => {
         });
 
         setMessageText("");
+
+        dispatch({
+          type: reducerCases.SET_ALL_CONTACTS_CONNECTED,
+          allContactsConnected: [
+            { data: {...currentChatUser,...data.message} },
+            ...allContactsConnected.filter(
+              (usr) => usr.data.id !== currentChatUser.id
+            ),
+          ],
+        });
+
       } catch (error) {
         console.error(error);
       }

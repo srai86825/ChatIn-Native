@@ -6,8 +6,9 @@ export default function LocalImage({ image, type }) {
     <View>
       {type === "sm" && (
         <Image
-          source={require(`../../assets${"/default_avatar.png"}`)}
+          source={require(`../../assets${"/avatars/3.png"}`)}
           style={{ width: 36, height: 36 }}
+          className="rounded-full"
         />
       )}
     </View>

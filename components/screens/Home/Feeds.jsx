@@ -112,7 +112,6 @@ const Feeds = () => {
         <View
           className="pb-3 bg-pinkshade rounded-xl mb-4"
           style={{ height: 250 }}
-          // source={require("../../../assets/svgs/confetti-doodles.png")}
         >
           {currentIcebreaker === -1 ? (
             <View>
@@ -125,6 +124,10 @@ const Feeds = () => {
               <View className="w-full h-auto py-4 px-3 flex flex-row items-center justify-between">
                 <View className="">
                   {/* <Icebreaker width={150} height={150} fill="white" /> */}
+                  <Image
+                    source={require("../../../assets/avatars/9.png")}
+                    
+                    style={{ width: 150, height: 150,borderRadius:50 }}/>
                 </View>
                 <View className=" py-4 px-3 flex flex-col justify-center items-center ">
                   <Text className="text-white font-bold text-xl">

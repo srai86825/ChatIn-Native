@@ -24,7 +24,7 @@ const Nav = () => {
           <Entypo name="home" size={24} color="white" />
         </Pressable>
 
-        <Pressable className="p-4" onPress={() => navigation.navigate("Home")}>
+        <Pressable className="p-4" onPress={() => navigation.navigate("Search")}>
           <AntDesign name="search1" size={24} color="white" />
         </Pressable>
 

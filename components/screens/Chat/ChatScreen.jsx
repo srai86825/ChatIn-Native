@@ -35,6 +35,7 @@ const ChatScreen = () => {
           type: reducerCases.SET_MESSAGES,
           messages: data.messages.allMessages,
         });
+
         // console.log("currentChat", messages);
       } catch (error) {
         console.log(

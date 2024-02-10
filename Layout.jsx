@@ -15,6 +15,7 @@ import { useGlobalContext, useGlobalSocket } from "./context/StateContext";
 import ChatScreen from "./components/screens/Chat/ChatScreen";
 import { HOST_SERVER } from "./utils/ApiRoutes";
 import { reducerCases } from "./context/constants";
+import Search from "./components/screens/Search/Search";
 
 const Layout = () => {
   const Stack = createNativeStackNavigator();
@@ -109,10 +110,9 @@ const Layout = () => {
               <Stack.Screen name="Chat" component={Chat} />
               <Stack.Screen name="ViewStory" component={ViewStory} />
               <Stack.Screen name="ChatScreen" component={ChatScreen} />
+              <Stack.Screen name="Search" component={Search} />
             </Stack.Navigator>
-            {/*Commented for development purposes add once done, and remove the other nav*/}
             {!fullScreenMode && <Nav />}
-            {/* <Nav/> */}
           </NavigationContainer>
         </View>
       )}
