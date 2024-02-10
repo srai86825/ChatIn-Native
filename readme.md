@@ -33,11 +33,11 @@ Contributions are welcome! If you have any ideas, suggestions, or bug reports, p
 
 ## Screenshots
 
-![Screenshot 1](assets/screenshots/1.jpg)
-![Screenshot 2](assets/screenshots/2.jpg)
-![Screenshot 3](assets/screenshots/3.jpg)
-![Screenshot 4](assets/screenshots/4.jpg)
-<img src="assets/screenshots/1.jpg" alt="drawing" width="200" height="200"/>
+
+<img src="assets/screenshots/1.jpg" alt="drawing" width="400" height="600"/>
+<img src="assets/screenshots/2.jpg" alt="drawing" width="400" height="600"/>
+<img src="assets/screenshots/3.jpg" alt="drawing" width="400" height="600"/>
+<img src="assets/screenshots/4.jpg" alt="drawing" width="400" height="600"/>
 
 ## Technologies Used
 
