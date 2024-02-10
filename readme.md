@@ -13,7 +13,6 @@ ChatIn is a social media app that allows users to interact with each other throu
 
 - React Native Expo: A framework for building native apps using React.
 - Socket.io: A library for real-time, bidirectional and event-based communication.
-- [Add any other technologies or libraries used in your project]
 
 ## Installation
 
